@@ -1,31 +1,50 @@
 <script setup>
-import CreppyMonday from '@/assets/images/creppy-monday.png'
+import { computed, ref } from 'vue'
+
+const boomDays = ref(0);
+const boomHours = ref(0);
+const boomMinutes = ref(0);
+const boomSeconds = ref(0);
+
+function updateBoomCountdown() {
+  const oneDay = 60*60*24;
+  const oneHour = 60*60;
+  const oneMinute = 60;
+  let diffInSeconds = Math.trunc((new Date(2025, 6, 17).getTime() - new Date().getTime()) / 1000); // getTime returns milliseconds
+  boomDays.value = Math.trunc(diffInSeconds/60/60/24);
+  boomHours.value = Math.trunc((diffInSeconds-boomDays.value*oneDay)/60/60);
+  boomMinutes.value = Math.trunc((diffInSeconds-boomDays.value*oneDay-boomHours.value*oneHour)/60);
+  boomSeconds.value = Math.trunc(diffInSeconds-boomDays.value*oneDay-boomHours.value*oneHour-boomMinutes.value*oneMinute);
+  setTimeout(updateBoomCountdown, 1000);
+}
+
+updateBoomCountdown();
 
 const spoons = [
   {
-    title: 'Hoe laat is het? Solidaritijd!',
-    // image: 'https://extinctionrebellion.nl/app/uploads/2019/10/X-symbol-richBlack.svg',
-    // text: '',
-    link: 'https://extinctionrebellion.nl/',
+    title: 'Fédra\'s Hungarian Bangers',
+    // image: '',
+    text: 'dit is mijn sterrenstof',
+    link: 'https://open.spotify.com/playlist/1ngbA4MdYM36K3hLdukpZP?si=pt82AV9yS7i58qBHD0HFZw&pi=e-KEwjLvngRlKz',
   },
   {
-    title: 'It gets better',
-    // image: 'https://www.google.com/chrome/static/images/chrome-logo.svg',
-    text: 'Or does it?',
-    link: 'https://www.instagram.com/p/DChPkd-RJJE/',
-  },
-  {
-    title: 'Crappy Monday? Crêppy Monday!',
-    image: CreppyMonday,
-    text: 'Food to heal your precious soul',
-    link: 'https://www.instagram.com/p/DAn9CHxIozz/',
-  },
-  {
-    title: 'Lets go shake again',
+    title: 'New Year\'s day plans',
     image: 'https://imgproxy.ra.co/_/quality:66/w:1442/rt:fill/aHR0cHM6Ly9pbWFnZXMucmEuY28vZWY2YWExOGI5NTAzYTZkNWM0MzE2OWEyZGMwNDE5MjI0NGNkZjE3OS5qcGc=',
-    text: 'It\' s way too long so someone had to make an executive decision.',
+    // text: '',
     link: 'https://shop.eventix.io/68c42916-cc69-490b-8328-74832008d056/tickets',
   },
+  {
+    title: 'Boom Festival',
+    image: 'https://www.boomfestival.org/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fdancer%20(2).9296a51c.png&w=2048&q=75',
+    text: computed(() => `${boomDays.value}d ${boomHours.value}h ${boomMinutes.value}m ${boomSeconds.value}s`),
+    link: 'https://www.boomfestival.org/',
+  },
+  {
+    title: 'Thylacine set',
+    // image: '',
+    // text: '',
+    link: 'https://soundcloud.com/platform/thylacine?si=528ce0e8ab1047229b8072c3291e2eeb',
+  }
 ]
 
 let randomNumber = Math.floor(Math.random() * spoons.length)
