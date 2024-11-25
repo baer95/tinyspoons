@@ -105,7 +105,7 @@ let randomNumber = Math.floor(Math.random() * spoons.length)
 
     <p v-if="'text' in spoons[randomNumber]">{{ spoons[randomNumber].text }}</p>
 
-    <a v-if="'link' in spoons[randomNumber]" :href="spoons[randomNumber].link">{{spoons[randomNumber].link}}</a>
+    <a v-if="'link' in spoons[randomNumber]" :href="spoons[randomNumber].link" class="button">Click me</a>
   </div>
 </template>
 
@@ -121,5 +121,18 @@ div.spoon {
 
 div.spoon img {
   height: 40vh;
+}
+
+a.button {
+  color: white;
+  background-color: hsla(160, 100%, 37%, 1);;
+  padding: 15px 32px;
+  font-size: 16px;
+}
+a.button:hover {
+  box-shadow: 3px 3px 8px grey; /* <offset-x> <offset-y> <blur-radius> <color> */
+}
+a.button:active {
+  box-shadow: none;
 }
 </style>
