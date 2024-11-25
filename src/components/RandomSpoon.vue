@@ -1,6 +1,11 @@
 <script setup>
 import { computed, ref } from 'vue'
 
+import AdeWednesday from '@/assets/images/ade-wednesday.jpg'
+import AtTheGetTogether from '@/assets/images/at-the-get-together.jpg'
+// import CreppyMonday from '@/assets/images/creppy-monday.png'
+import MakingNecklaces from '@/assets/images/making-necklaces.jpg'
+
 const boomDays = ref(0);
 const boomHours = ref(0);
 const boomMinutes = ref(0);
@@ -20,7 +25,23 @@ function updateBoomCountdown() {
 
 updateBoomCountdown();
 
+// eslint-disable-next-line no-unused-vars
+const copyPasteThis = [
+  {
+    title: '',
+    image: '',
+    text: '',
+    link: '',
+  },
+];
+
 const spoons = [
+  // {
+  //   title: '',
+  //   image: '',
+  //   text: '',
+  //   link: '',
+  // },
   {
     title: 'Fédra\'s Hungarian Bangers',
     // image: '',
@@ -34,9 +55,9 @@ const spoons = [
     link: 'https://shop.eventix.io/68c42916-cc69-490b-8328-74832008d056/tickets',
   },
   {
-    title: 'Boom Festival',
+    title: 'Countdown to Boom Town',
     image: 'https://www.boomfestival.org/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fdancer%20(2).9296a51c.png&w=2048&q=75',
-    text: computed(() => `${boomDays.value}d ${boomHours.value}h ${boomMinutes.value}m ${boomSeconds.value}s`),
+    text: computed(() => `Can you believe we're going there in ${boomDays.value}d ${boomHours.value}h ${boomMinutes.value}m ${boomSeconds.value}s ?`),
     link: 'https://www.boomfestival.org/',
   },
   {
@@ -44,7 +65,25 @@ const spoons = [
     // image: '',
     // text: '',
     link: 'https://soundcloud.com/platform/thylacine?si=528ce0e8ab1047229b8072c3291e2eeb',
-  }
+  },
+  {
+    // title: '',
+    image: MakingNecklaces,
+    text: 'We are always just one phone call away',
+    // link: '',
+  },
+  {
+    // title: '',
+    image: AdeWednesday,
+    text: 'If you ever feel down, remember that the earth is 4.5 billion years old and we get to exist at the same time as molly',
+    // link: '',
+  },
+  {
+    // title: '',
+    image: AtTheGetTogether,
+    // text: '',
+    // link: '',
+  },
 ]
 
 let randomNumber = Math.floor(Math.random() * spoons.length)
