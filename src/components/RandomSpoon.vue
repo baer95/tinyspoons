@@ -59,7 +59,7 @@ const spoons = [
     title: 'Thylacine set',
     // image: '',
     // text: '',
-    link: 'https://soundcloud.com/platform/thylacine?si=528ce0e8ab1047229b8072c3291e2eeb',
+    link: 'https://on.soundcloud.com/pHtPpVLY3YivTd6q7',
   },
   {
     // title: '',
