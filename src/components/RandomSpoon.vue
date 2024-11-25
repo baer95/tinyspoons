@@ -1,6 +1,7 @@
 <script setup>
 import { computed, ref } from 'vue'
 
+import Acid from '@/assets/images/acid.jpg'
 import AdeWednesday from '@/assets/images/ade-wednesday.jpg'
 import AtTheGetTogether from '@/assets/images/at-the-get-together.jpg'
 // import CreppyMonday from '@/assets/images/creppy-monday.png'
@@ -36,12 +37,6 @@ const copyPasteThis = [
 ];
 
 const spoons = [
-  // {
-  //   title: '',
-  //   image: '',
-  //   text: '',
-  //   link: '',
-  // },
   {
     title: 'Fédra\'s Hungarian Bangers',
     // image: '',
@@ -84,6 +79,13 @@ const spoons = [
     // text: '',
     // link: '',
   },
+  {
+    // title: '',
+    image: Acid,
+    // text: '',
+    // link: '',
+  },
+
 ]
 
 let randomNumber = Math.floor(Math.random() * spoons.length)
