@@ -4,7 +4,7 @@ import { computed, ref } from 'vue'
 import Acid from '@/assets/images/acid.jpg'
 import AdeWednesday from '@/assets/images/ade-wednesday.jpg'
 import AtTheGetTogether from '@/assets/images/at-the-get-together.jpg'
-// import CreppyMonday from '@/assets/images/creppy-monday.png'
+import CreppyMonday from '@/assets/images/creppy-monday.png'
 import MakingNecklaces from '@/assets/images/making-necklaces.jpg'
 
 const boomDays = ref(0);
@@ -38,18 +38,6 @@ const copyPasteThis = [
 
 const spoons = [
   {
-    title: 'Fédra\'s Hungarian Bangers',
-    // image: '',
-    text: 'dit is mijn sterrenstof',
-    link: 'https://open.spotify.com/playlist/1ngbA4MdYM36K3hLdukpZP?si=pt82AV9yS7i58qBHD0HFZw&pi=e-KEwjLvngRlKz',
-  },
-  {
-    title: 'New Year\'s day plans',
-    image: 'https://imgproxy.ra.co/_/quality:66/w:1442/rt:fill/aHR0cHM6Ly9pbWFnZXMucmEuY28vZWY2YWExOGI5NTAzYTZkNWM0MzE2OWEyZGMwNDE5MjI0NGNkZjE3OS5qcGc=',
-    // text: '',
-    link: 'https://shop.eventix.io/68c42916-cc69-490b-8328-74832008d056/tickets',
-  },
-  {
     title: 'Countdown to Boom Town',
     image: 'https://www.boomfestival.org/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fdancer%20(2).9296a51c.png&w=2048&q=75',
     text: computed(() => `Can you believe we're going there in ${boomDays.value}d ${boomHours.value}h ${boomMinutes.value}m ${boomSeconds.value}s ?`),
@@ -57,21 +45,15 @@ const spoons = [
   },
   {
     title: 'Thylacine set',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/LesEscales2019Thylacine_02.jpg/2560px-LesEscales2019Thylacine_02.jpg',
+    text: 'imagine this: what if a really talented medieval peasant had access to CDJs',
+    link: 'https://soundcloud.com/thylacinew/thylacine-live-with-instruments-fusion-festival-2022',
+  },
+  {
+    title: 'Fédra\'s Hungarian Bangers',
     // image: '',
-    // text: '',
-    link: 'https://on.soundcloud.com/pHtPpVLY3YivTd6q7',
-  },
-  {
-    // title: '',
-    image: MakingNecklaces,
-    text: 'We are always just one phone call away',
-    // link: '',
-  },
-  {
-    // title: '',
-    image: AdeWednesday,
-    text: 'If you ever feel down, remember that the earth is 4.5 billion years old and we get to exist at the same time as molly',
-    // link: '',
+    text: 'dit is mijn sterrenstof',
+    link: 'https://open.spotify.com/playlist/1ngbA4MdYM36K3hLdukpZP?si=pt82AV9yS7i58qBHD0HFZw&pi=e-KEwjLvngRlKz',
   },
   {
     // title: '',
@@ -85,7 +67,30 @@ const spoons = [
     // text: '',
     // link: '',
   },
-
+  {
+    // title: '',
+    image: AdeWednesday,
+    text: 'If you ever feel down, remember that the earth is 4.5 billion years old and we get to exist at the same time as molly',
+    // link: '',
+  },
+  {
+    // title: '',
+    image: MakingNecklaces,
+    text: 'We are always just one phone call away',
+    // link: '',
+  },
+  {
+    title: 'Crêppy Monday',
+    image: CreppyMonday,
+    text: 'All Crêpes Are Beautiful',
+    // link: '',
+  },
+  {
+    title: 'New Year\'s day plans',
+    image: 'https://imgproxy.ra.co/_/quality:66/w:1442/rt:fill/aHR0cHM6Ly9pbWFnZXMucmEuY28vZWY2YWExOGI5NTAzYTZkNWM0MzE2OWEyZGMwNDE5MjI0NGNkZjE3OS5qcGc=',
+    // text: '',
+    link: 'https://shop.eventix.io/68c42916-cc69-490b-8328-74832008d056/tickets',
+  },
 ]
 
 let randomNumber = Math.floor(Math.random() * spoons.length)
