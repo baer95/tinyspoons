@@ -6,6 +6,7 @@ import AdeWednesday from '@/assets/images/ade-wednesday.jpg'
 import AtTheGetTogether from '@/assets/images/at-the-get-together.jpg'
 import CreppyMonday from '@/assets/images/creppy-monday.png'
 import MakingNecklaces from '@/assets/images/making-necklaces.jpg'
+import VoiceMessage from '@/assets/images/voice-message.jpg'
 
 const boomDays = ref(0);
 const boomHours = ref(0);
@@ -81,6 +82,9 @@ const spoons = [
   {
     title: 'Everything will be okay.',
     text: 'But seriously, what the fuck?',
+  },
+  {
+    image: VoiceMessage,
   },
 ]
 
