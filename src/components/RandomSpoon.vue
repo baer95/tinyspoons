@@ -51,45 +51,36 @@ const spoons = [
   },
   {
     title: 'Fédra\'s Hungarian Bangers',
-    // image: '',
     text: 'dit is mijn sterrenstof',
     link: 'https://open.spotify.com/playlist/1ngbA4MdYM36K3hLdukpZP?si=pt82AV9yS7i58qBHD0HFZw&pi=e-KEwjLvngRlKz',
   },
   {
-    // title: '',
     image: AtTheGetTogether,
-    // text: '',
-    // link: '',
   },
   {
-    // title: '',
     image: Acid,
-    // text: '',
-    // link: '',
   },
   {
-    // title: '',
     image: AdeWednesday,
     text: 'If you ever feel down, remember that the earth is 4.5 billion years old and we get to exist at the same time as molly',
-    // link: '',
   },
   {
-    // title: '',
     image: MakingNecklaces,
     text: 'We are always just one phone call away',
-    // link: '',
   },
   {
     title: 'Crêppy Monday',
     image: CreppyMonday,
     text: 'All Crêpes Are Beautiful',
-    // link: '',
   },
   {
     title: 'New Year\'s day plans',
     image: 'https://imgproxy.ra.co/_/quality:66/w:1442/rt:fill/aHR0cHM6Ly9pbWFnZXMucmEuY28vZWY2YWExOGI5NTAzYTZkNWM0MzE2OWEyZGMwNDE5MjI0NGNkZjE3OS5qcGc=',
-    // text: '',
     link: 'https://shop.eventix.io/68c42916-cc69-490b-8328-74832008d056/tickets',
+  },
+  {
+    title: 'Everything will be okay.',
+    text: 'But seriously, what the fuck?',
   },
 ]
 
